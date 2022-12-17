@@ -1,17 +1,23 @@
 {
-  "name": "template",
-  "version": "1.0.0",
-  "description": "for project default setting",
-  "main": "index.js",
+  "name": "@jun5e00/test",
+  "version": "0.0.2",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "description": "publish npm package for test",
   "repository": "https://github.com/yoon-junseo/template.git",
   "author": "junseo <ysj6844@naver.com>",
   "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "dev": "webpack serve --config webpack.dev.js --progress",
     "build": "webpack --config webpack.prod.js --progress && echo '/* /index.html 200' > dist/_redirects",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "publish:npm": "rm -rf dist && mkdir dist && babel src/publish -d dist --copy-files"
   },
   "dependencies": {
     "@loadable/component": "^5.15.0",
@@ -22,6 +28,7 @@
     "styled-reset": "^4.4.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.19.3",
     "@babel/core": "^7.16.0",
     "@babel/plugin-transform-runtime": "^7.16.0",
     "@babel/preset-env": "^7.16.0",
