@@ -1,44 +1,22 @@
 {
-  "name": "@jun5e00/test",
-  "version": "0.0.5",
-  "description": "sample npm package",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/esm/index.d.ts",
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
-  ],
+  "name": "junseo-package",
+  "version": "1.0.0",
+  "description": "Demo page of @jun5e00/test",
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
-    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
-    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run prettier && npm run lint"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html --dist-dir docs --public-url .",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\""
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yoon-junseo/junseo-package.git"
   },
-  "keywords": [
-    "react",
-    "typescript",
-    "junseo"
-  ],
-  "author": "jun5e00",
+  "author": "yoon-junseo",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yoon-junseo/junseo-package/issues"
-  },
-  "homepage": "https://github.com/yoon-junseo/junseo-package#readme",
-  "peerDependencies": {
-    "react": ">=16"
-  },
   "devDependencies": {
+    "@jun5e00/test": "^0.0.5",
     "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "eslint": "^8.30.0",
@@ -46,7 +24,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "parcel": "^2.8.2",
     "prettier": "^2.8.1",
+    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.4"
