@@ -1,6 +1,6 @@
 {
   "name": "@jun5e00/test",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "description": "publish npm package for test",
