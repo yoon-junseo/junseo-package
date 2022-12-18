@@ -1,6 +1,6 @@
 {
   "name": "@jun5e00/test",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "description": "publish npm package for test",
@@ -17,6 +17,7 @@
     "test": "jest",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "prepublishOnly": "yarn run build",
     "publish:npm": "rm -rf dist && mkdir dist && babel src/publish -d dist --copy-files"
   },
   "dependencies": {
