@@ -17,7 +17,7 @@ const Counter = ({ value }: Props) => {
 
   return (
     <div>
-      <h1>Counter: {counter}</h1>
+      <h1>Jun5e00 Counter: {counter}</h1>
       <button onClick={onClickMinus}>-</button>
       <button onClick={onClikcPlus}>+</button>
     </div>
